@@ -1,0 +1,51 @@
+:root {
+  --color-text: #333;
+  --color-bg: #edf0f4;
+  --color-primary: #f7a283;
+  --color-primary-light: #ffbfa8;
+  --color-secondary: #80bacc;
+}
+body {
+  background-color: var(--color-bg);
+}
+
+.post-list h1,
+.post-list h2,
+.post h1 {
+  font-family: 'Zilla Slab', serif;
+}
+.post-list h1 {
+  color: var(--color-secondary);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.entry.row{
+  margin: 20px 0;
+}
+.entry__link-wrapper * {
+  color: var(--color-text);
+  text-decoration: none;
+
+}
+.entry h2{
+  color: var(--color-primary);
+}
+.entry__link-wrapper:hover h2 {
+  color: var(--color-primary-light);
+}
+
+.post__heading {
+  margin-bottom: 40px;
+}
+  .post__heading h1 {
+    margin-bottom: 5px;
+    font-family: 'Zilla Slab', serif;
+    color: var(--color-primary);
+    text-align: unset;
+  }
+  .post__heading .post__date {
+    color: var(--color-secondary);
+    font-size: 18px;
+    font-family: 'Zilla Slab', serif;
+  }

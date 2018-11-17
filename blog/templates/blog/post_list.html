@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Blog title which will have a catchier name later</h1>
-    <div class="post-list">
-      {%for post in posts%}
-        <div class="entry">
-          <a class="entry__link-wrapper" href="">
+{% extends 'blog/base.html' %}
+{% block content %}
+  <div class="post-list">
+    <h1>The blather repository</h1>
+    {%for post in posts%}
+      <div class="entry row">
+        <a class="entry__link-wrapper" width="100%" href="{%url 'post_detail' pk=post.pk %}">
+          <div class="col-sm-5">
             <span class="entry__date">published: {{post.published_date}}</span>
             <h2 class="entry__title">{{post.title}}</h2>
-            <p class="entry__content">{{post.text|linebreaksbr}}</p>
-          </a>
-        </div>
-
-      {% endfor %}
-
-    </div>
-  </body>
-</html>
+          </div>
+          <div class="col-sm-7">
+            <p class="entry__content">{{post.text|linebreaksbr|slice:":500"}}...</p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
