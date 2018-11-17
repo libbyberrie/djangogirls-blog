@@ -10,6 +10,13 @@
     <title>Libby's Djangogirls blog example</title>
   </head>
   <body>
+    <div class="header">
+      <div class="container">
+        {% if user.is_authenticated %}
+          <a class="header__new-link" href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
+      </div>
+    </div>
     <div class="container">
       {% block content %}
       {% endblock %}

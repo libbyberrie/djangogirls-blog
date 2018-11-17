@@ -6,8 +6,8 @@
       <div class="entry row">
         <a class="entry__link-wrapper" width="100%" href="{%url 'post_detail' pk=post.pk %}">
           <div class="col-sm-5">
-            <span class="entry__date">published: {{post.published_date}}</span>
             <h2 class="entry__title">{{post.title}}</h2>
+            <span class="entry__date">published: {{post.published_date}}</span>
           </div>
           <div class="col-sm-7">
             <p class="entry__content">{{post.text|linebreaksbr|slice:":500"}}...</p>
